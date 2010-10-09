@@ -14,8 +14,7 @@
         }
 
         if (!head) {
-            var args = arguments;
-            setTimeout(function () { boostrap.apply(this, args) }, 10);
+            setTimeout(function () { boostrap.call(this, src, fn) }, 10);
         } else {
             var c = 0, i = 0, l = src.length,
                 onload = function () {

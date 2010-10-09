@@ -23,7 +23,7 @@
 
             for (; l > i; ++i) {
                 var tag = document.createElement("script");
-                tag.setAttribute("src", src[i]);
+                tag.src = src[i];
                 bind.call(tag, "load", onload);
                 head.insertBefore(tag, lastTag ? lastTag.nextSibling : head.firstChild);
             }
